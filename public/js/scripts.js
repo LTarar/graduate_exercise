@@ -1,6 +1,7 @@
 const app = document.getElementById('root')
 const list = document.getElementById('list')
 const count = document.getElementsByClassName('count')[0];
+const complete = document.getElementsByClassName('complete')[0];
 
 console.log("count: ", count)
 
@@ -12,6 +13,7 @@ request.onload = function() {
   var data = JSON.parse(this.response)
 
   count.append(data.length);
+  let total = 0
 
   if (request.status >= 200 && request.status < 400) {
     data.slice().reverse().forEach(todo => {
@@ -22,11 +24,15 @@ request.onload = function() {
 
       li.append(title)
       list.appendChild(li)
-
+      
+      if (todo.completed === true) {
+        total += 1
+      }
     })
   } else {
       console.log('error')
   }
+  complete.append(total)
 }
 
 request.send()
