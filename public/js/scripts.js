@@ -3,8 +3,6 @@ const list = document.getElementById('list')
 const count = document.getElementsByClassName('count')[0];
 const complete = document.getElementsByClassName('complete')[0];
 
-console.log("count: ", count)
-
 var request = new XMLHttpRequest()
 
 request.open('GET', 'http://localhost:3000/api/todos', true)
