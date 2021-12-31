@@ -7,7 +7,7 @@
 - Add styling
 
 ## Project setup
-- git clone 'https://github.com/WardahTarar/graduate_exercise'
+- git clone 'https://github.com/LTarar/graduate_exercise'
 - cd graduate_exercise
 - run 'npm install'
 - run 'node index.js'
